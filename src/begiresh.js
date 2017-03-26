@@ -6,9 +6,15 @@ const doc = require('get-doc');
 const cookie = require('cookie-cutter');
 const ua = require('ua-parser-js');
 
-/* global navigator */
-let userLangAttribute = navigator.language || navigator.userLanguage || navigator.browserLanguage;
+// global navigator
+const userLangAttribute = navigator.language || navigator.userLanguage || navigator.browserLanguage;
 const userLang = userLangAttribute.slice(0, 2) || 'fa';
+
+// date parsing
+const msInOneDay = 1000 * 60 * 60 * 24;
+const today = Number(new Date());
+
+// root and Dom
 let root = doc && doc.documentElement;
 
 // market dependent functionality
@@ -128,14 +134,14 @@ Begiresh.prototype = {
 		this.hide();
 		cookie.set('begiresh-closed', 'true', {
 			path: '/',
-			expires: new Date(Number(new Date()) + (this.options.daysHidden * 1000 * 60 * 60 * 24))
+			expires: this.getExpirationDate(this.options.daysHidden)
 		});
 	},
 	install: function () {
 		this.hide();
 		cookie.set('begiresh-installed', 'true', {
 			path: '/',
-			expires: new Date(Number(new Date()) + (this.options.daysReminder * 1000 * 60 * 60 * 24))
+			expires: this.getExpirationDate(this.options.daysReminder)
 		});
 	},
 	parseAppId: function () {
@@ -145,6 +151,9 @@ Begiresh.prototype = {
 		this.appId = /app-id=([^\s,]+)/.exec(meta.getAttribute('content'))[1];
 
 		return this.appId;
+	},
+	getExpirationDate: function (remainingDays) {
+		return new Date(today + (remainingDays * msInOneDay))
 	}
 };
 
