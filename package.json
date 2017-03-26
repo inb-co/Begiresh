@@ -4,7 +4,10 @@
   "description": "A mobile application smart banner for Iranian markets",
   "main": "src/begiresh.js",
   "scripts": {
-    "build": "browserify src/begiresh.js -s Begiresh | ccjs - > dist/begiresh.js"
+    "postcss": "postcss --use autoprefixer *.css -d dist/ ",
+    "build-css": "catw -c 'lessc -' 'src/begiresh.less' > dist/begiresh.css && postcss dist/begiresh.css --use autoprefixer -r --no-map",
+    "build-js": "browserify src/begiresh.js -s Begiresh | ccjs - > dist/begiresh.js",
+    "build": "npm run build-js && npm run build-css"
   },
   "repository": {
     "type": "git",
@@ -29,7 +32,11 @@
     "xtend": "^4.0.0"
   },
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
     "browserify": "^10.2.4",
-    "closurecompiler": "^1.5.1"
+    "catw": "^1.0.1",
+    "closurecompiler": "^1.5.1",
+    "less": "^2.7.2",
+    "postcss-cli": "^3.0.0"
   }
 }
