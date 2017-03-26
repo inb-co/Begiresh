@@ -5,7 +5,14 @@ Begiresh is a lightweight none-jQuery,  smart application banner targeting major
 This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquery.smartbanner).
 
 ## Installation
+### NPM
 `$ npm install --save begiresh`
+
+### CDN
+`https://unpkg.com/begiresh@1.0.0/dist/begiresh.js`
+
+`https://unpkg.com/begiresh@1.0.0/dist/begiresh.css`
+
 
 ## Usage
 1. Add Meta and `Begiresh.css` to `<head>` of your HTML:
@@ -21,7 +28,7 @@ This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquer
     <link rel="apple-touch-icon" href="roozame-apple-touch-icon.png"> <!-- And/Or -->
     <link rel="apple-touch-icon-precomposed" href="roozame-apple-touch-icon-precomposed.png">
 
-    <link rel="stylesheet" href="node_modules/begiresh/begiresh.css" media="screen" title="Begiresh Smart Banner CSS">
+    <link rel="stylesheet" href="path/to/begiresh.css" media="screen" title="Begiresh Smart Banner CSS">
 
     <!-- Other Stuff Here -->
   </head>
@@ -33,7 +40,7 @@ This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquer
 
     <!-- Other Stuff Here -->
 
-    <script src="node_modules/begiresh/begiresh.js"></script>
+    <script src="path/to/begiresh.js"></script>
   </body>
 ```
 
