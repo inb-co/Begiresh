@@ -4,7 +4,6 @@
   "description": "A mobile application smart banner for Iranian markets",
   "main": "src/begiresh.js",
   "scripts": {
-    "postcss": "postcss --use autoprefixer *.css -d dist/ ",
     "build-css": "catw -c 'lessc -' 'src/begiresh.less' > dist/begiresh.css && postcss dist/begiresh.css --use autoprefixer -r --no-map",
     "build-js": "browserify src/begiresh.js -s Begiresh | ccjs - > dist/begiresh.js",
     "build": "npm run build-js && npm run build-css"
