@@ -42,6 +42,7 @@ let Begiresh = function (options) {
 		price: 'رایگان',
 		button: 'بگیرش', // Text for the install button
 		icon: '', // full path to icon image if not using website icon image
+		force: false,
 	}, options || {});
 
   if (agent.os.name === 'Android') this.type = 'android';
@@ -53,9 +54,9 @@ let Begiresh = function (options) {
 	const unsupported = !this.type;
 	const runningStandAlone = navigator.standalone;
 	const userDismissed = cookie.get('begiresh-closed');
-	const userInstalled = cookie.get('begiresh-installed');
+	const userInstalled = cookie.get('begiresh-installed')
 
-	if (unsupported || runningStandAlone || userDismissed || userInstalled) return;
+	if (!this.options.force && (unsupported || runningStandAlone || userDismissed || userInstalled)) return;
 
 	extend(this, mixins[this.options.store]);
 
