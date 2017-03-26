@@ -89,19 +89,20 @@ Begiresh.prototype = {
 		}
 
 		let banner = doc.createElement('div');
-		var theme = this.options.store;
 
-		banner.className = 'begiresh begiresh-' + theme;
+		banner.className = 'begiresh';
 		banner.innerHTML = '<div class="begiresh-container">' +
-							'<a href="javascript:void(0);" class="begiresh-close">&times;</a>' +
-							'<span class="begiresh-icon" style="background-image: url(' + icon + ')"></span>' +
+							'<a href="javascript:void(0);" class="begiresh-close"></a>' +
 							'<div class="begiresh-info">' +
-								'<div class="begiresh-title">' + this.options.title + '</div>' +
-								'<div>' + this.options.author + '</div>' +
-								'<span>' + inStore + '</span>' +
+								'<span class="begiresh-icon" style="background-image: url(' + icon + ')"></span>' +
+								'<div class="begiresh-meta">' +
+									'<span class="begiresh-title">' + this.options.title + '</span>' +
+									'<span class="begiresh-author">' + this.options.author + '</span>' +
+									'<span class="begiresh-store">' + inStore + '</span>' +
+								'</div>' +
 							'</div>' +
-							'<a href="' + link + '" class="begiresh-button">' +
-								'<span class="begiresh-button-text">' + this.options.button + '</span>' +
+							'<a href="' + link + '" class="begiresh-download">' +
+								'<span class="begiresh-download-text">' + this.options.button + '</span>' +
 							'</a>' +
 						'</div>';
 
@@ -114,7 +115,7 @@ Begiresh.prototype = {
 			});
 		}
 
-		q('.begiresh-button', banner).addEventListener('click', this.install.bind(this), false);
+		q('.begiresh-download', banner).addEventListener('click', this.install.bind(this), false);
 		q('.begiresh-close', banner).addEventListener('click', this.close.bind(this), false);
 	},
 	hide: function () {
