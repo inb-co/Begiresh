@@ -1,6 +1,6 @@
 # Begiresh
 
-Begiresh is a lightweight none-jQuery,  smart application banner targeting major Iranian android markets.
+Begiresh is a lightweight none-jQuery,  smart application banner targeting major Iranian android markets. A live [demo](http://roozame.com/) can be seen at [roozame.com](http://roozame.com/).
 
 This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquery.smartbanner).
 
