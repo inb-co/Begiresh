@@ -39,7 +39,6 @@ let mixins = {
 
 let Begiresh = function (options) {
 
-	const agent = ua(navigator.userAgent);
 	this.options = extend({}, {
 		daysHidden: 15,
 		daysReminder: 90,
