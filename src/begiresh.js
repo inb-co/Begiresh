@@ -4,9 +4,9 @@ const extend = require('xtend/mutable');
 const q = require('component-query');
 const doc = require('get-doc');
 const cookie = require('cookie-cutter');
-const ua = require('ua-parser-js');
 
 // global navigator
+const userAgentAttribute = navigator.userAgent || navigator.vendor || window.opera;
 const userLangAttribute = navigator.language || navigator.userLanguage || navigator.browserLanguage;
 const userLang = userLangAttribute.slice(0, 2) || 'fa';
 
@@ -51,7 +51,7 @@ let Begiresh = function (options) {
 		force: false,
 	}, options || {});
 
-  if (agent.os.name === 'Android') this.type = 'android';
+	if (!/windows phone/i.test(userAgentAttribute) && /android/i.test(userAgentAttribute)) this.type = 'android'
 
 	// Don't show banner on ANY of the following conditions:
 	// - device os is not supported,
