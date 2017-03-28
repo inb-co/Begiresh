@@ -9,9 +9,9 @@ This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquer
 `$ npm install --save begiresh`
 
 ### CDN
-`https://unpkg.com/begiresh@1.0.0/dist/begiresh.js`
+`https://unpkg.com/begiresh@1.1.0/dist/begiresh.js`
 
-`https://unpkg.com/begiresh@1.0.0/dist/begiresh.css`
+`https://unpkg.com/begiresh@1.1.0/dist/begiresh.css`
 
 
 ## Usage
