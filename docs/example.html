@@ -1,52 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="IKA">
+
+	<meta name="cafe-bazaar-app" content="app-id=com.inb.roozame">
+	<meta name="google-play-app" content="app-id=com.inb.roozame">
+
+	<link rel="apple-touch-icon" href="img/icon.png">
+	<link rel="android-touch-icon" href="img/icon.png">
+	<link rel="windows-touch-icon" href="img/icon.png">
+
+	<title>بگیرش - مثال</title>
+
+	<!-- Styles -->
+
+	<!-- Begiresh CSS -->
+	<link rel="stylesheet" type="text/css" href="../dist/begiresh.css">
+
+	<!-- Gorbeh Icons -->
+	<link href="gorbeh/css/gorbeh-icons.min.css" type="text/css" rel="stylesheet">
+
+	<!-- Joqd Core CSS -->
+	<link href="css/joqd.min.css" type="text/css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/custom.css" type="text/css" rel="stylesheet">
+</head>
+
+	<body class="joqd grey-lighten-4 container-narrow" style="overflow: hidden">
+		<main class="joqd row">
+			<section class="joqd mobile-12 no-padding">
+				<img src="img/screenshot.png" class="joqd responsive">
+			</section>
+		</main>
 
 
-<!-- A test of begiresh -->
-
-
-<title>begiresh test</title>
-
-
-<meta charset="utf-8">
-<meta name="cafe-bazaar-app" content="app-id=com.inb.roozame">
-<meta name="google-play-app" content="app-id=com.inb.roozame">
-
-<meta name="msApplication-ID" content="microsoft.build.App"/>
-<meta name="msApplication-PackageFamilyName" content="microsoft.build_8wekyb3d8bbwe"/>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<link rel="stylesheet" type="text/css" href="../dist/begiresh.css">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="android-touch-icon" href="icon.png" />
-<link rel="windows-touch-icon" href="icon.png" />
-
-<style type="text/css">
-	* {
-		box-sizing: border-box;
-	}
-	body{
-		overflow: hidden;
-		margin: 0}
-	img{
-		width: 100%;
-		height: auto;
-	}
-</style>
-
-<script type="text/javascript" src="../dist/begiresh.js"></script>
-
-
-<script>
-new Begiresh({
-	title: 'روزامه',
-	author: 'ایده نگاران بینا',
-	store: 'cafeBazaar',
-	force: true
-});
-</script>
-
-<body>
-	<img src="img/screenshot.png">
-</body>
+		<!-- Begiresh Script -->
+		<script type="text/javascript" src="../dist/begiresh.js"></script>
+		<script>
+			new Begiresh({
+				title: 'روزامه',
+				author: 'ایده نگاران بینا',
+				store: 'cafeBazaar',
+				force: true
+			});
+		</script>
+	</body>
+</html>
