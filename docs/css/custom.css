@@ -27,3 +27,5 @@ main .row:last-of-type{padding-bottom: 5vh}
   color: white}
 .preview-nexus5 .marvel-device .screen .status-bar{height: 25px}
 .preview-nexus5 .marvel-device .screen .nav-bar{height: 48px}
+
+.preview-code{overflow: hidden !important}
