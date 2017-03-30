@@ -16,6 +16,8 @@ header .preview-wrapper{
   position: absolute;
   top: 12px; left: 12px}
 
+main .row{padding-top: 5vh}
+main .row:last-of-type{padding-bottom: 5vh}
 
 .preview-nexus5{width: 340px; height: 640px}
 .preview-nexus5 .marvel-device{width: 100% !important; height: 100% !important}
