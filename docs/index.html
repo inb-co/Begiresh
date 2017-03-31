@@ -54,7 +54,7 @@
 										<div class="screen">
 												<div class="status-bar"></div>
 												<div style="height: 567px; position: relative;">
-													<iframe src="example.html"style="width: 100%; height: 100%; border: none;">
+													<iframe src="example.html" style="width: 100%; height: 100%; border: none;">
 														<p>Your browser does not support iframes.</p>
 													</iframe>
 												</div>
@@ -98,7 +98,7 @@ https://unpkg.com/begiresh/dist/begiresh.css</code></pre>
 					<pre class="joqd grey-lighten-5 soft-corner thin-border grey-lighten-1-border preview-code language-git"><code>$ git clone https://github.com/inb-co/Begiresh.git</code></pre>
 
 					<h3>دانلود همه چیز</h3>
-					<p>شما می‌توانید تمام پروژه‌ی <strong>بگیرش</strong> را یکجا <a href="https://github.com/inb-co/Begiresh/archive/v.1.1.1.tar.gz" class="joqd link light-green-darken-1-text light-green-darken-3-text-hover transition-smooth">دانلود کنید</a>. این دانلود شامل آخرین نسخه‌ی پایدار (۱.۱.۱) و با حجم کمتر از ۱۰ کیلوبایت خواهد بود.</p>
+					<p>شما می‌توانید تمام پروژه‌ی <strong>بگیرش</strong> را یکجا <a href="https://github.com/inb-co/Begiresh/archive/v.1.1.1.tar.gz" class="joqd link light-green-darken-1-text light-green-darken-3-text-hover transition-smooth" title="دانلود آخرین نسخه‌ی بگیرش">دانلود کنید</a>. این دانلود شامل آخرین نسخه‌ی پایدار (۱.۱.۱) و با حجم کمتر از ۱۰ کیلوبایت خواهد بود.</p>
 
 				</div>
 			</section>
@@ -133,6 +133,8 @@ new Begiresh({
   title: 'روزامه',
   author: 'ایده نگاران بینا'
 });</code></pre>
+				<i class="joqd small"><b>توجه:</b> این پروژه به طور پیش‌فرش از <a href="http://gorbeh.ikacc.ir/" class="joqd link light-green-darken-1-text light-green-darken-3-text-hover transition-smooth" title="فونت آیکون گربه" target="_blank">آیکون‌های گربه</a> و فونت <a href="https://rastikerdar.github.io/vazir-font/" class="joqd link light-green-darken-1-text light-green-darken-3-text-hover transition-smooth" title="فونت وزیر" target="_blank">وزیر</a> استفاده می‌کند که هر دو نیز آزاد و رایگان می‌باشند. با این حال شما می‌توانید به راحتی آن‌ها را <span lang="en">overwrite</span> کنید.</i>
+
 
 				</div>
 			</section>
@@ -172,7 +174,7 @@ new Begiresh({
 								<td class="joqd desktop-3 light-green-darken-1-text"><b lang="en">icon</b></td>
 								<td class="joqd desktop-2"><span lang="en">favicon</span> سایت</td>
 								<td class="joqd desktop-2">استرینگ</td>
-								<td class="joqd desktop-5">آدرس به آیکن آپلیکیشن</td>
+								<td class="joqd desktop-5">آدرس به آیکون آپلیکیشن</td>
 							</tr>
 							<tr class="joqd row align-right grey-darken-1-text thin-bottom-border grey-lighten-2-border">
 								<td class="joqd desktop-3 light-green-darken-1-text"><b lang="en">daysHidden</b></td>
@@ -253,20 +255,40 @@ new Begiresh({
 									<i class="gb gb_add"></i>
 								</div>
 								<p class="joqd align-center h3">درخواست استور</p>
-								<p class="joqd align-center askForeMoreText">اگر فک می‌کنید لازم است تا استور دیگری به <strong>بگیرش</strong> اضافه شود، در گیتهاب پروژه در خواست کنید!</p>
+								<p class="joqd align-center askForeMoreText">اگر فک می‌کنید لازم است تا استور دیگری به <strong>بگیرش</strong> اضافه شود، در گیتهاب پروژه مطرح کنید!</p>
 							</a>
 						</li>
 					</ul>
 
 					<h3>پوسته‌ها</h3>
-					<p>لورم ایپسوم</p>
+					<div>
+						<p>این قسمت به زودی اضافه خواهد شد!</p>
+					</div>
 
 				</div>
 			</section>
 			<section class="joqd row">
 				<div class="joqd desktop-11">
 					<h2>توسعه</h2>
-					<p>لورم ایپسوم</p>
+					<p>قبل از انجام هر تغییری، برای ممکن‌سازی گرفتن <span lang="en">build</span>،به دایرکتوری پروژه رفته و وابستگی‌های آن را نصب کنید:</p>
+					<pre class="joqd grey-lighten-5 soft-corner thin-border grey-lighten-1-border preview-code language-bash"><code>$ cd Begiresh/
+$ npm install</code></pre>
+					<p>حال می‌توانید با اجرای دستور زیر، <span lang="en">CSS</span> و <span lang="en">JS</span> را همزمان <span lang="en">build</span> کنید:</p>
+					<pre class="joqd grey-lighten-5 soft-corner thin-border grey-lighten-1-border preview-code language-bash"><code>$ npm run build</code></pre>
+
+					<h3>توسعه‌ی <span lang="en">CSS</span></h3>
+					<p>ظاهر <strong>بگیرش</strong> به کمک ترنس‌پایلر <span lang="en">LESS</span> ساخته شده است که می‌توانید آن را در آدرس <code class="language-none">/src/begiresh.less</code> پیدا کنید.</p>
+					<p>شما می‌توانید به سادگی و تنها تغییر دادن مقادیر متغیرهای موجود در فایل <span lang="en">less</span>، که از اسامی‌شان می‌توان رفتارشان را حدس زد، شکل و ظاهر متفاوتی برای اسمارت بنر خود ایجاد کنید. البته تغییر دادن هسته‌ی اصلی <strong>بگیرش</strong> دشوار هم نیست.</p>
+					<p>همچنین لازم نیست نگران پیشوند برای کدهای <span lang="en">less</span> خود باشید. در زمان <span lang="en">build</span> گرفتن و بعد از ترنس‌پایل کردن، کل استایل‌ها توسط <span lang="en">postCSS</span> و <span lang="en">Autoprefixer</span>، پارس می‌شوند.</p>
+					<p>پس از اعمال تغییرات، می‌توانید با اجرای دستور زیر، فایل <span lang="en">less</span> را ترنس‌پایل کنید:</p>
+					<pre class="joqd grey-lighten-5 soft-corner thin-border grey-lighten-1-border preview-code language-bash"><code>$ npm run build-css</code></pre>
+
+
+					<h3>توسعه‌ی <span lang="en">JS</span></h3>
+					<p>فانکشنلیتی <strong>بگیرش</strong> به کمک جاواسکریپت خالص و به استاندارد <span lang="en">ES5</span> ساخته‌ شده است که می‌توانید آن را در آدرس <code class="language-none">/src/begiresh.js</code> پیدا کنید</p>
+					<p>پس از اعمال تغییرات، می‌توانید با اجرای دستور زیر، فایل <span lang="en">js</span> را باندل و مینیفای کنید:</p>
+					<pre class="joqd grey-lighten-5 soft-corner thin-border grey-lighten-1-border preview-code language-bash"><code>$ npm run build-js</code></pre>
+
 				</div>
 			</section>
 		</main>
