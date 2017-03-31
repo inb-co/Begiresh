@@ -13,15 +13,28 @@ header .buttons .button{
   margin: 48px 6px}
 header .buttons .button b{margin: 0 6px}
 header .preview-wrapper{
-  margin-top: -5vh;
+  margin-top: -1vh;
   margin-bottom: -12vh;
   position: absolute;
   top: 12px; left: 12px}
 
+.preview-nexus5{width: 340px; height: 640px}
+.preview-nexus5 .marvel-device{
+  box-shadow: -5px -5px 25px rgba(14,21,47,.4);
+  width: 100% !important; height: 100% !important}
+.preview-nexus5 .marvel-device .screen .status-bar,
+.preview-nexus5 .marvel-device .screen .nav-bar{
+  background-color: black;
+  color: white}
+.preview-nexus5 .marvel-device .screen .status-bar{height: 25px}
+.preview-nexus5 .marvel-device .screen .nav-bar{height: 48px}
+
+.preview-code{direction: ltr}
+.preview-code *{font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace}
+
 main > .row{padding-top: 5vh}
 main > .row:last-of-type{padding-bottom: 5vh}
 main h3{margin: 36px 0 12px}
-
 
 .stores-list .store{
   position: relative;
@@ -49,19 +62,7 @@ main h3{margin: 36px 0 12px}
   margin-bottom: -12px}
 .stores-list .store.askForMore .askForeMoreText{margin: 44px 12px 28px}
 
-.preview-nexus5{width: 340px; height: 640px}
-.preview-nexus5 .marvel-device{
-  box-shadow: -5px -5px 25px rgba(14,21,47,.4);
-  width: 100% !important; height: 100% !important}
-.preview-nexus5 .marvel-device .screen .status-bar,
-.preview-nexus5 .marvel-device .screen .nav-bar{
-  background-color: black;
-  color: white}
-.preview-nexus5 .marvel-device .screen .status-bar{height: 25px}
-.preview-nexus5 .marvel-device .screen .nav-bar{height: 48px}
-
-.preview-code{direction: ltr}
-.preview-code *{font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace}
-
 table td,
 table th{white-space: inherit !important}
+
+footer{padding: 12px 0}
