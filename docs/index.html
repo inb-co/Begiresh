@@ -52,13 +52,23 @@
 										<div class="volume"></div>
 										<div class="camera"></div>
 										<div class="screen">
-												<div class="status-bar"></div>
-												<div style="height: 567px; position: relative;">
-													<iframe src="example.html" style="width: 100%; height: 100%; border: none;">
-														<p>Your browser does not support iframes.</p>
-													</iframe>
-												</div>
-												<div class="nav-bar"></div>
+											<div class="status-bar" lang="en">
+												<i id="mobileTime" class="right"></i>
+												<i class="gb gb_battery_full right"></i>
+												<i class="gb gb_signal_cellular_null right"></i>
+												<i class="gb gb_signal_wifi_4_bar right"></i>
+												<i class="gb gb_cafebazaar left"></i>
+											</div>
+											<div style="height: 567px; position: relative;">
+												<iframe src="example.html" style="width: 100%; height: 100%; border: none;">
+													<p>Your browser does not support iframes.</p>
+												</iframe>
+											</div>
+											<div class="nav-bar">
+												<i class="gb gb_check_box_outline_blank gb_s24"></i>
+												<i class="gb gb_panorama_fish_eye gb_s24"></i>
+												<i class="gb gb_details gb_s24 gb_r90"></i>
+											</div>
 										</div>
 								</div>
 							</div>
@@ -311,12 +321,11 @@ $ npm install</code></pre>
 		</footer>
 
 		<!-- Scripts -->
-
-		<!-- Joqd Core js -->
-		<script src="js/joqd.min.js"></script>
-
 		<!-- Prism js -->
 		<script src="js/prism.min.js"></script>
+
+		<!-- DocReady js -->
+		<script src="js/docready.min.js"></script>
 
 		<!-- Custom js -->
 		<script src="js/custom.js"></script>
