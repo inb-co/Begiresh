@@ -97,3 +97,24 @@ footer{padding: 12px 0}
   .stores-list .store .store-logo{padding-top: 18px}
   .stores-list .store.askForMore .askForeMoreText{margin-top: 49px}
 }
+
+@media screen and (max-width:767px) {
+  header .buttons .button{
+    font-size: 12px !important;
+    line-height: 3 !important;
+    margin: 48px 0}
+  header{padding-top: 12px}
+  table td,
+  table th{
+    white-space: nowrap !important;
+    float: none !important}
+  .stores-list .store .store-logo{
+    font-size: 36px;
+    padding: 15px;
+    float: right}
+  .stores-list .store .h3{
+    margin: 21px 12px;
+    float: right}
+  footer{text-align: center}
+  footer .gb{font-size: 24px}
+}
