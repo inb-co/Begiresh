@@ -49,12 +49,3 @@ axios.get('https://api.github.com/repos/inb-co/begiresh/releases/latest')
     sentence.getElementsByTagName('span')[0].innerHTML = '(ن.' + fars(response.data.tag_name.replace('v.', '')) + ')';
 
   });
-axios.get('https://api.github.com/repos/inb-co/begiresh')
-  .then(function(response){
-
-    const sentence = document.getElementById('download_sentence');
-
-    sentence.getElementsByTagName('span')[1].innerHTML = fars(response.data.size.toString());
-
-
-  });
