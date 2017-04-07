@@ -21,6 +21,7 @@ header .preview-wrapper{
 
 .preview-helper{
   width: 100%; height: 100%;
+  max-width: 340px; max-height: 640px;
   position: absolute;
   top: 0; right: 0}
 .preview-nexus5{
