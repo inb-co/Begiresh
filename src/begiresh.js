@@ -48,7 +48,9 @@ let Begiresh = function (options) {
 		button: 'بگیرش', // Text for the install button
 		icon: '', // full path to icon image if not using website icon image
 		force: false,
-	}, options || {});
+		onDownload: function(){},
+		onClose: function() {}
+	}, options || arguments[0] || {});
 
 	if (!/windows phone/i.test(userAgentAttribute) && /android/i.test(userAgentAttribute)) this.type = 'android'
 
@@ -130,6 +132,7 @@ Begiresh.prototype = {
 		root.classList.add('begiresh-show');
 	},
 	close: function () {
+		this.options.onClose.call();
 		this.hide();
 		cookie.set('begiresh-closed', 'true', {
 			path: '/',
@@ -137,6 +140,7 @@ Begiresh.prototype = {
 		});
 	},
 	install: function () {
+		this.options.onDownload.call();
 		this.hide();
 		cookie.set('begiresh-installed', 'true', {
 			path: '/',
