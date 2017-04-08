@@ -2,16 +2,21 @@
 
 Begiresh is a lightweight none-jQuery,  smart application banner targeting major Iranian android markets. A live [demo](http://roozame.com/) can be seen at [roozame.com](http://roozame.com/).
 
+For having more information, demo and how-to instructions, visit [inb-co.github.io/Begiresh](https://inb-co.github.io/Begiresh) (currently only Farsi).
+
 This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquery.smartbanner).
 
 ## Installation
+### Yarn
+`$ yarn add begiresh`
+
 ### NPM
 `$ npm install --save begiresh`
 
 ### CDN
-`https://unpkg.com/begiresh@1.1.0/dist/begiresh.js`
+`https://unpkg.com/begiresh/dist/begiresh.js`
 
-`https://unpkg.com/begiresh@1.1.0/dist/begiresh.css`
+`https://unpkg.com/begiresh/dist/begiresh.css`
 
 
 ## Usage
@@ -66,7 +71,7 @@ you can use these options for having a customized smart banner:
 | `price` | `رایگان` | string | Price of app | Nay |
 | `button` | `بگیرش` | string | Text on download button | Nay |
 | `icon` | Site's Favicon | string | Address to app's icon | Nay |
-| `force` | `false` | boolean | Force to have banner on every platform and ignoring cookies | Yay |
+| `force` | `false` | boolean | Force to have banner on every platform and ignoring cookies | Nay |
 
 These stores are currently supported:
 
