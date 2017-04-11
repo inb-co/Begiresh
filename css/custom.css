@@ -76,7 +76,10 @@ main h3{margin: 36px 0 12px}
 .stores-list .store dl dt{
   padding: 6px 12px;
   height: 31px}
-.stores-list .store dl dd{font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace}
+.stores-list .store dl dd{
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  white-space: nowrap;
+  direction: rtl}
 .stores-list .shadow{
   position: absolute;
   top: 8%; right: 8%;
