@@ -22,7 +22,6 @@ let mixins = {
 	googlePlay: {
     name: 'گوگل‌پلی',
 		appMeta: 'google-play-app',
-		iconRels: ['android-touch-icon', 'apple-touch-icon-precomposed', 'apple-touch-icon'],
 		getStoreLink: function () {
 			return 'http://play.google.com/store/apps/details?id=' + this.appId + '&hl=' + this.options.storeLang;
 		}
@@ -30,12 +29,14 @@ let mixins = {
   cafeBazaar: {
     name: 'کافه‌بازار',
 		appMeta: 'cafe-bazaar-app',
-    iconRels: ['android-touch-icon', 'apple-touch-icon-precomposed', 'apple-touch-icon'],
 		getStoreLink: function () {
 			return 'https://cafebazaar.ir/app/' + this.appId + '/?l=' + this.options.storeLang;
 		}
 	}
 };
+
+// favicons as icon
+const iconRels = ['android-touch-icon', 'apple-touch-icon-precomposed', 'apple-touch-icon'];
 
 let Begiresh = function (options) {
 
@@ -87,17 +88,7 @@ Begiresh.prototype = {
 		const inStore = this.options.price + ' در ' + this.name;
 		let icon;
 
-		if (this.options.icon) {
-			icon = this.options.icon;
-		} else {
-			for (let i = 0; i < this.iconRels.length; i++) {
-				const rel = q('link[rel="' + this.iconRels[i] + '"]');
-				if (rel) {
-					icon = rel.getAttribute('href');
-					break;
-				}
-			}
-		}
+		this.options.icon ? icon = this.options.icon : icon = this.getIcon();
 
 		let banner = doc.createElement('div');
 
@@ -120,7 +111,7 @@ Begiresh.prototype = {
 		// there isn’t neccessary a body
 		if (doc.body) {
 			doc.body.appendChild(banner);
-		}		else if (doc) {
+		}	else if (doc) {
 			doc.addEventListener('DOMContentLoaded', function () {
 				doc.body.appendChild(banner);
 			});
@@ -161,6 +152,12 @@ Begiresh.prototype = {
 	},
 	getExpirationDate: function (remainingDays) {
 		return new Date(today + (remainingDays * msInOneDay))
+	},
+	getIcon: function (){
+		for (let i = 0; i < iconRels.length; i++) {
+			const rel = q('link[rel="' + iconRels[i] + '"]');
+			if (rel) return rel.getAttribute('href');
+		}
 	}
 };
 
