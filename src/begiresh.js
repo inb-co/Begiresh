@@ -24,7 +24,7 @@ let mixins = {
 		appMeta: 'google-play-app',
 		iconRels: ['android-touch-icon', 'apple-touch-icon-precomposed', 'apple-touch-icon'],
 		getStoreLink: function () {
-			return 'http://play.google.com/store/apps/details?id=' + this.appId + '&hl=' + this.options.appStoreLanguage;
+			return 'http://play.google.com/store/apps/details?id=' + this.appId + '&hl=' + this.options.storeLang;
 		}
 	},
   cafeBazaar: {
@@ -32,7 +32,7 @@ let mixins = {
 		appMeta: 'cafe-bazaar-app',
     iconRels: ['android-touch-icon', 'apple-touch-icon-precomposed', 'apple-touch-icon'],
 		getStoreLink: function () {
-			return 'https://cafebazaar.ir/app/' + this.appId + '/?l=' + this.options.appStoreLanguage;
+			return 'https://cafebazaar.ir/app/' + this.appId + '/?l=' + this.options.storeLang;
 		}
 	}
 };
@@ -40,17 +40,20 @@ let mixins = {
 let Begiresh = function (options) {
 
 	this.options = extend({}, {
+		price: 'رایگان', // Price of app
+		icon: '', // full path to icon image if not using website icon image
 		daysHidden: 15, // Numbers of days to hide banner after dismissed
 		daysReminder: 90, // Numbers of days to hide banner after downloaded
-		appStoreLanguage: userLang, // Language code for app store
+		storeLang: userLang, // Language code for app store
     store: 'googlePlay', // App store
-		price: 'رایگان', // Price of app
 		button: 'بگیرش', // Text for the install button
-		icon: '', // full path to icon image if not using website icon image
 		force: false, // always show banner
 		onDownload: function(){}, // After download callback
-		onClose: function() {} // After dismiss callback
+		onClose: function() {}, // After dismiss callback
+		appStoreLanguage: null, // Backward compatibility
 	}, options || arguments[0] || {});
+
+	if (this.options.appStoreLanguage != null) this.options.storeLang = this.options.appStoreLanguage;
 
 	if (!/windows phone/i.test(userAgentAttribute) && /android/i.test(userAgentAttribute)) this.type = 'android'
 
