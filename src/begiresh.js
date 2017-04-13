@@ -40,24 +40,25 @@ let mixins = {
 let Begiresh = function (options) {
 
 	this.options = extend({}, {
-		daysHidden: 15,
-		daysReminder: 90,
-		appStoreLanguage: userLang, // Language code for App Store
-    store: 'googlePlay',
-		price: 'رایگان',
+		daysHidden: 15, // Numbers of days to hide banner after dismissed
+		daysReminder: 90, // Numbers of days to hide banner after downloaded
+		appStoreLanguage: userLang, // Language code for app store
+    store: 'googlePlay', // App store
+		price: 'رایگان', // Price of app
 		button: 'بگیرش', // Text for the install button
 		icon: '', // full path to icon image if not using website icon image
-		force: false,
-		onDownload: function(){},
-		onClose: function() {}
+		force: false, // always show banner
+		onDownload: function(){}, // After download callback
+		onClose: function() {} // After dismiss callback
 	}, options || arguments[0] || {});
 
 	if (!/windows phone/i.test(userAgentAttribute) && /android/i.test(userAgentAttribute)) this.type = 'android'
 
 	// Don't show banner on ANY of the following conditions:
-	// - device os is not supported,
-	// - running on standalone mode
-	// - user dismissed banner
+	// - device os is not supported (Android),
+	// - running on standalone mode,
+	// - user dismissed banner,
+	// - user installed banner
 	const unsupported = !this.type;
 	const runningStandAlone = navigator.standalone;
 	const userDismissed = cookie.get('begiresh-closed');
