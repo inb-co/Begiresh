@@ -64,14 +64,16 @@ you can use these options for having a customized smart banner:
 | ------ | ------------- | ---- | ----------- | -------- |
 | `title` | `none` | string | Title of app | Yay |
 | `author` | `none` | string | Author of app | Yay |
-| `daysHidden` | `15` | number | Number of days banner hides after touching close button | Nay |
-| `daysReminder` | `90` | number | Number of days banner hides after touching download button | Nay |
-| `appStoreLanguage` | User's Language | string | User and store's language (on ISO Language Codes) | Nay |
-| `store` | `googlePlay` | string | Store's ID | Nay |
 | `price` | `رایگان` | string | Price of app | Nay |
-| `button` | `بگیرش` | string | Text on download button | Nay |
 | `icon` | Site's Favicon | string | Address to app's icon | Nay |
+| `daysHidden` | `15` | number | Number of days banner hides after dismiss | Nay |
+| `daysReminder` | `90` | number | Number of days banner hides after download | Nay |
+| `storeLang` | User's Language | string | User and store's language (on ISO Language Codes) | Nay |
+| `store` | `googlePlay` | string | Store's ID | Nay |
+| `button` | `بگیرش` | string | Text on download button | Nay |
 | `force` | `false` | boolean | Force to have banner on every platform and ignoring cookies | Nay |
+| `onDownload` | `none` | function | run a function after download | Nay |
+| `onClose` | `none` | function | run a function after dismiss | Nay |
 
 These stores are currently supported:
 
