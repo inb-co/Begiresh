@@ -1,6 +1,6 @@
 {
   "name": "begiresh",
-  "version": "1.1.1",
+  "version": "1.2",
   "description": "A mobile application smart banner for Iranian markets",
   "main": "src/begiresh.js",
   "scripts": {
