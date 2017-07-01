@@ -32,6 +32,13 @@ let mixins = {
 		getStoreLink: function () {
 			return 'https://cafebazaar.ir/app/' + this.appId + '/?l=' + this.options.storeLang;
 		}
+	},
+  myket: {
+    name: 'مایکت',
+		appMeta: 'myket-app',
+		getStoreLink: function () {
+			return 'https://myket.ir/app/' + this.appId + '/?lang=' + this.options.storeLang;
+		}
 	}
 };
 
