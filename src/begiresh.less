@@ -21,84 +21,86 @@
 
 .begiresh{
 	display: none;
-	position: fixed;
-	left: 0; right: 0; bottom: 0;
-	width: 100%; max-width: @max-width;
-	margin: auto;
-	background: @background;
-	font-family: @font;
-	z-index: 9998;
-	overflow: hidden;
-	direction: rtl;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: none;
-	.begiresh-container{
-		margin: 0 auto;
-		padding: 8px 12px;
-		white-space: nowrap;
-		position: relative;
-		.begiresh-close{
-			position: absolute;
-			right: 12px; top: 23px;
-			padding: 4px;
-			border-radius: 50%;
-			color: @close-color;
-			background-color: @close-bg;
-			font-family: @close-icon;
-			font-size: 14px;
-			line-height: 1;
-			text-align: center;
-			text-decoration: none;
-			-webkit-font-smoothing: subpixel-antialiased;
-			transition: all 200ms ease-in-out;
-			&:after{content: @close-glyph}
-			&:active,
-			&:hover{background-color: darken(@close-bg, 30)}
-		}
-		.begiresh-download{
-			position: absolute;
-			left: 12px; top: 0; bottom: 0;
-			margin: auto 0;
-			height: 24px;
-			font-size: 14px;
-			line-height: 24px;
-			text-align: center;
-			text-decoration: none;
-			.begiresh-download-text{
-				background-color: @download-bg;
-				color: @download-color;
-				padding: 6px 12px;
-				border-radius: 4px;
+	&.theme-default{
+		position: fixed;
+		left: 0; right: 0; bottom: 0;
+		width: 100%; max-width: @max-width;
+		margin: auto;
+		background: @background;
+		font-family: @font;
+		z-index: 9998;
+		overflow: hidden;
+		direction: rtl;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-size-adjust: none;
+		.begiresh-container{
+			margin: 0 auto;
+			padding: 8px 12px;
+			white-space: nowrap;
+			position: relative;
+			.begiresh-close{
+				position: absolute;
+				right: 12px; top: 23px;
+				padding: 4px;
+				border-radius: 50%;
+				color: @close-color;
+				background-color: @close-bg;
+				font-family: @close-icon;
+				font-size: 14px;
+				line-height: 1;
+				text-align: center;
+				text-decoration: none;
+				-webkit-font-smoothing: subpixel-antialiased;
 				transition: all 200ms ease-in-out;
+				&:after{content: @close-glyph}
 				&:active,
-				&:hover{background-color: darken(@download-bg, 30)}
+				&:hover{background-color: darken(@close-bg, 30)}
 			}
-		}
-		.begiresh-info{
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 34px;
-			.begiresh-icon{
+			.begiresh-download{
+				position: absolute;
+				left: 12px; top: 0; bottom: 0;
+				margin: auto 0;
+				height: 24px;
+				font-size: 14px;
+				line-height: 24px;
+				text-align: center;
+				text-decoration: none;
+				.begiresh-download-text{
+					background-color: @download-bg;
+					color: @download-color;
+					padding: 6px 12px;
+					border-radius: 4px;
+					transition: all 200ms ease-in-out;
+					&:active,
+					&:hover{background-color: darken(@download-bg, 30)}
+				}
+			}
+			.begiresh-info{
+				display: inline-block;
 				vertical-align: middle;
-				width: 57px; height: 57px;
-				background-size: cover;
-				border-radius: 16px;
-				float: right}
-			.begiresh-meta{
-				float: right;
-				padding: 8px 12px;
-				span{
-					display: block;
-					color: @info-color;
-					font-weight: bold;
-					&.begiresh-title{
-						font-size: 13px;
-						line-height: 1.2em}
-					&.begiresh-author,
-					&.begiresh-store{
-						font-size: 11px;
-						line-height: 1.2em;
-						color: fade(@info-color, 57)}
+				margin-right: 34px;
+				.begiresh-icon{
+					vertical-align: middle;
+					width: 57px; height: 57px;
+					background-size: cover;
+					border-radius: 16px;
+					float: right}
+				.begiresh-meta{
+					float: right;
+					padding: 8px 12px;
+					span{
+						display: block;
+						color: @info-color;
+						font-weight: bold;
+						&.begiresh-title{
+							font-size: 13px;
+							line-height: 1.2em}
+						&.begiresh-author,
+						&.begiresh-store{
+							font-size: 11px;
+							line-height: 1.2em;
+							color: fade(@info-color, 57)}
+					}
 				}
 			}
 		}
