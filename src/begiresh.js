@@ -143,7 +143,7 @@ Begiresh.prototype = {
 			path: '/',
 			expires: this.getExpirationDate(this.options.daysReminder)
 		});
-    ga.track({category:'begiresh', action:'click', label:'install'})
+        ga.track({category:'begiresh', action:'click', label:'install'})
 	},
 	parseAppId: function () {
 		let meta = q('meta[name="' + this.appMeta + '"]');

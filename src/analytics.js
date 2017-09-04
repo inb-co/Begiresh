@@ -1,4 +1,4 @@
-export const track = ({category ,action, label}) => {
+module.exports.track = function({category ,action, label})  {
 
     if(ga){
         ga('send', {
