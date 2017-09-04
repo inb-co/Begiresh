@@ -4,6 +4,7 @@ const extend = require('xtend/mutable');
 const q = require('component-query');
 const doc = require('get-doc');
 const cookie = require('cookie-cutter');
+const ga = require('./analytics')
 
 // global navigator
 const userAgentAttribute = navigator.userAgent || navigator.vendor || window.opera;
@@ -133,6 +134,7 @@ Begiresh.prototype = {
 			path: '/',
 			expires: this.getExpirationDate(this.options.daysHidden)
 		});
+		ga.track({category:'begiresh', action:'click', label:'close'})
 	},
 	install: function () {
 		this.options.onDownload.call();
@@ -141,6 +143,7 @@ Begiresh.prototype = {
 			path: '/',
 			expires: this.getExpirationDate(this.options.daysReminder)
 		});
+        ga.track({category:'begiresh', action:'click', label:'install'})
 	},
 	parseAppId: function () {
 		let meta = q('meta[name="' + this.appMeta + '"]');
