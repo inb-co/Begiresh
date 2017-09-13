@@ -27,7 +27,8 @@ This project was inspired by [jquery.smartbanner](https://github.com/jasny/jquer
     <title>Roozame.com</title>
 
     <meta name="cafe-bazaar-app" content="app-id=com.inb.roozame"> <!-- And/Or -->
-    <meta name="google-play-app" content="app-id=com.inb.roozame">
+    <meta name="google-play-app" content="app-id=com.inb.roozame"> <!-- And/Or -->
+    <meta name="myket-app" content="app-id=com.inb.roozame">
 
     <link rel="android-touch-icon" href="roozame-android-icon.png"> <!-- And/Or -->
     <link rel="apple-touch-icon" href="roozame-apple-touch-icon.png"> <!-- And/Or -->
@@ -82,6 +83,7 @@ These stores are currently supported:
 | ------ | ------ | ------ |
 | Googel Play (گوگل‌پلی) | googlePlay | google-play-app |
 | Cafe Bazaar (کافه‌بازار) | cafeBazaar | cafe-bazaar-app |
+| Myket (مایکت) | myket | myket-app |
 
 ## Development
 To customize and develop the project you could use following npm commands:
