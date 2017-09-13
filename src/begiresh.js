@@ -33,6 +33,13 @@ let mixins = {
 		getStoreLink: function () {
 			return 'https://cafebazaar.ir/app/' + this.appId + '/?l=' + this.options.storeLang;
 		}
+	},
+  myket: {
+    name: 'مایکت',
+		appMeta: 'myket-app',
+		getStoreLink: function () {
+			return 'https://myket.ir/app/' + this.appId + '/?lang=' + this.options.storeLang;
+		}
 	}
 };
 
@@ -49,6 +56,7 @@ let Begiresh = function (options) {
 		storeLang: userLang, // Language code for app store
     store: 'googlePlay', // App store
 		button: 'بگیرش', // Text for the install button
+		theme: 'default', // Theme of the banner
 		force: false, // always show banner
 		onDownload: function(){}, // After download callback
 		onClose: function() {}, // After dismiss callback
@@ -94,6 +102,7 @@ Begiresh.prototype = {
 		let banner = doc.createElement('div');
 
 		banner.className = 'begiresh';
+		banner.classList.add('theme-' + this.options.theme);
 		banner.innerHTML = '<div class="begiresh-container">' +
 							'<a href="javascript:void(0);" class="begiresh-close"></a>' +
 							'<div class="begiresh-info">' +
