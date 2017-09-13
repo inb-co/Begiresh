@@ -62,18 +62,19 @@ you can use these options for having a customized smart banner:
 
 | Option | Default Value | Type | Description | Required |
 | ------ | ------------- | ---- | ----------- | -------- |
-| `title` | `none` | string | Title of app | Yay |
-| `author` | `none` | string | Author of app | Yay |
-| `price` | `رایگان` | string | Price of app | Nay |
-| `icon` | Site's Favicon | string | Address to app's icon | Nay |
-| `daysHidden` | `15` | number | Number of days banner hides after dismiss | Nay |
-| `daysReminder` | `90` | number | Number of days banner hides after download | Nay |
-| `storeLang` | User's Language | string | User and store's language (on ISO Language Codes) | Nay |
-| `store` | `googlePlay` | string | Store's ID | Nay |
-| `button` | `بگیرش` | string | Text on download button | Nay |
-| `force` | `false` | boolean | Force to have banner on every platform and ignoring cookies | Nay |
-| `onDownload` | `none` | function | run a function after download | Nay |
-| `onClose` | `none` | function | run a function after dismiss | Nay |
+| `title` | `none` | string | Title of app | Yep |
+| `author` | `none` | string | Author of app | Yep |
+| `price` | `رایگان` | string | Price of app | Nop |
+| `icon` | Site's Favicon | string | Address to app's icon | Nop |
+| `daysHidden` | `15` | number | Number of days banner hides after dismiss | Nop |
+| `daysReminder` | `90` | number | Number of days banner hides after download | Nop |
+| `storeLang` | User's Language | string | User and store's language (on ISO Language Codes) | Nop |
+| `store` | `googlePlay` | string | Store's ID | Nop |
+| `button` | `بگیرش` | string | Text on download button | Nop |
+| `theme` | `default` | string | Begiresh Theme | Nop |
+| `force` | `false` | boolean | Force to have banner on every platform and ignoring cookies | Nop |
+| `onDownload` | `none` | function | run a function after download | Nop |
+| `onClose` | `none` | function | run a function after dismiss | Nop |
 
 These stores are currently supported:
 
