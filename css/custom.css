@@ -67,6 +67,7 @@ main h3{margin: 36px 0 12px}
   padding: 12px}
 .stores-list .store.googlePlay{background-color: #689f38}
 .stores-list .store.cafeBazaar{background-color: #91b42f}
+.stores-list .store.myket{background-color: #00b0ff}
 .stores-list .store .store-logo{
   font-size: 64px;
   padding-top: 72px;
@@ -93,6 +94,9 @@ main h3{margin: 36px 0 12px}
 
 table td,
 table th{white-space: inherit !important}
+
+.themes-list .card .card-title .title{font-size: 18px !important}
+.themes-list .card .card-title .subtitle{font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace}
 
 footer{padding: 12px 0}
 
